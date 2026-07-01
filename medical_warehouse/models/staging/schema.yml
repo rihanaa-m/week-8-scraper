@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: telegram_messages
+        description: "Raw Telegram message data loaded from data lake"
+        columns:
+          - name: message_id
+            description: "Unique identifier for each message"
+            tests:
+              - not_null
+          - name: channel_name
+            description: "Name of the Telegram channel"
+            tests:
+              - not_null
+          - name: message_date
+            description: "Timestamp of the message"
+            tests:
+              - not_null
+          - name: message_text
+            description: "Full text content of the message"
+          - name: has_media
+            description: "Whether the message contains media"
+          - name: image_path
+            description: "Path to downloaded image"
+          - name: views
+            description: "Number of views on the message"
+          - name: forwards
+            description: "Number of times the message was forwarded"
+          - name: loaded_at
+            description: "Timestamp when the record was loaded into the database"

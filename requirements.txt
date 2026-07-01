@@ -2,3 +2,11 @@ telethon
 python-dotenv
 pydantic
 pydantic-settings
+psycopg2-binary
+dbt-postgres
+ultralytics
+fastapi
+uvicorn
+sqlalchemy
+dagster
+dagster-webserver
